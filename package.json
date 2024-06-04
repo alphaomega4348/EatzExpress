@@ -1,0 +1,25 @@
+{
+  "name": "react-x",
+  "version": "1.0.0",
+  "description": "This is react-X ",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphaomega4348/React-X.git"
+  },
+  "keywords": [
+    "react-X"
+  ],
+  "author": "Shivam Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alphaomega4348/React-X/issues"
+  },
+  "homepage": "https://github.com/alphaomega4348/React-X#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
