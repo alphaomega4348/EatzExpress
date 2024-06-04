@@ -1,3 +1,5 @@
+import React from "react"
+import ReactDOM from "react-dom" 
 for(let i=0;i<1000;i++){
 
 }
