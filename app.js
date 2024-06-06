@@ -18,10 +18,39 @@ const Header=()=>(
     </div>
 )
 
+const ResturantCard=()=>(
+    <div className="res-card">
+        <img src="https://media.radissonhotels.net/image/radisson-blu-metropol-hotel-helsingborg/miscellaneous/16256-116535-f64660969_3xl.jpg"/>
+        <h3>Radisson Blu</h3>
+        <h4>North Indian,Pacifian</h4>
+        <h4>4.8⭐️</h4>
+        <h5>24 mins</h5>
+    </div>
+)
+
+const Body=()=>(
+    <div className="body">
+        <div className="Search">Search</div>
+        <div className="res-container">
+       < ResturantCard/>
+       < ResturantCard/>
+       < ResturantCard/>
+       < ResturantCard/>
+       < ResturantCard/>
+       < ResturantCard/>
+       < ResturantCard/>
+       < ResturantCard/>
+       
+
+        </div>
+    </div>
+)
+
 
 const AppLayout=()=>(
         <div className="APP">
             <Header/>
+            <Body/>
         </div>
 
 )

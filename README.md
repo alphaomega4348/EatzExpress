@@ -10,6 +10,11 @@
 -- body
     -search
     -resturant card
+        -img
+        -restro name
+        -cuisine
+        -star rating
+        dely time
     -resturant container
 --footer
     -copyright

@@ -3025,28 +3025,149 @@ const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         columnNumber: 5
     }, undefined);
 _c = Header;
+const ResturantCard = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "res-card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: "https://media.radissonhotels.net/image/radisson-blu-metropol-hotel-helsingborg/miscellaneous/16256-116535-f64660969_3xl.jpg"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 23,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "Radisson Blu"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 24,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "North Indian,Pacifian"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 25,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "4.8\u2B50\uFE0F"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 26,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                children: "24 mins"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 27,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "app.js",
+        lineNumber: 22,
+        columnNumber: 5
+    }, undefined);
+_c1 = ResturantCard;
+const Body = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "body",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "Search",
+                children: "Search"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 33,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "res-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResturantCard, {}, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 35,
+                        columnNumber: 8
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResturantCard, {}, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 36,
+                        columnNumber: 8
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResturantCard, {}, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 37,
+                        columnNumber: 8
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResturantCard, {}, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 38,
+                        columnNumber: 8
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResturantCard, {}, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 39,
+                        columnNumber: 8
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResturantCard, {}, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 40,
+                        columnNumber: 8
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResturantCard, {}, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 41,
+                        columnNumber: 8
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResturantCard, {}, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 42,
+                        columnNumber: 8
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "app.js",
+                lineNumber: 34,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "app.js",
+        lineNumber: 32,
+        columnNumber: 5
+    }, undefined);
+_c2 = Body;
 const AppLayout = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "APP",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
-            fileName: "app.js",
-            lineNumber: 24,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 52,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 53,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 23,
+        lineNumber: 51,
         columnNumber: 9
     }, undefined);
-_c1 = AppLayout;
+_c3 = AppLayout;
 const root = (0, _reactDomDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 33,
+    lineNumber: 62,
     columnNumber: 13
 }, undefined));
-var _c, _c1;
+var _c, _c1, _c2, _c3;
 $RefreshReg$(_c, "Header");
-$RefreshReg$(_c1, "AppLayout");
+$RefreshReg$(_c1, "ResturantCard");
+$RefreshReg$(_c2, "Body");
+$RefreshReg$(_c3, "AppLayout");
 
   $parcel$ReactRefreshHelpers$6024.postlude(module);
 } finally {
