@@ -3,32 +3,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-/* My Food App structure will look like this, 
-            1) Header
-                - Logo
-                - Nav Items(right side)
-                - Cart
-            2) Body
-                - Search bar
-                - Restaurants List
-                    - Restaurant card
-                        - Image
-                        - Name
-                        - Rating
-            3) Footer
-                - Links
-                - Copyrights
-       
-*/
-
-// Title component for display logo
 const Title = () => (
   <a href="/">
     <img className="logo" src="https://i.pinimg.com/originals/d2/82/c8/d282c8b0f4af7e8354081882ea4ae191.png" alt="Food Fire Logo" />
   </a>
 );
 
-// Header component for header section: Logo, Nav Items
+
 const Header = () => {
   return (
     <div className="header">
@@ -45,7 +26,6 @@ const Header = () => {
   );
 };
 
-// RestaurantList is JSON Data for displaying cards
 const restaurantList =[
     {
       "info": {
@@ -1892,7 +1872,6 @@ const restaurantList =[
     }
   ]
 
-// Restaurant card component: Image, name, cuisine
 const RestaurantCard = ({
   cloudinaryImageId,
   name,
@@ -1914,8 +1893,7 @@ const RestaurantCard = ({
   );
 };
 
-// Body Component for body section: It contain all restaurant cards
-// We are mapping restaurantList array and passing data to RestaurantCard component as props with unique key as index
+
 const Body = () => {
   return (
     <div className="res-container">
@@ -1926,7 +1904,7 @@ const Body = () => {
   );
 };
 
-// Footer component for footer section
+
 const Footer = () => {
     return(
       <div className="footer">
@@ -1934,7 +1912,7 @@ const Footer = () => {
       </div>
     )
   };
-// AppLayout component to show: Header, Body, Footer
+
 const AppLayout = () => {
   return (
     <React.Fragment>
