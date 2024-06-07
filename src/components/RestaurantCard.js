@@ -6,6 +6,7 @@ const RestaurantCard = ({
     cuisines,
     avgRating,
   }) => {
+    
     return (
       <div className="res-card">
         <img
