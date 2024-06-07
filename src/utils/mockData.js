@@ -1,31 +1,3 @@
-
-
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Title = () => (
-  <a href="/">
-    <img className="logo" src="https://i.pinimg.com/originals/d2/82/c8/d282c8b0f4af7e8354081882ea4ae191.png" alt="Food Fire Logo" />
-  </a>
-);
-
-
-const Header = () => {
-  return (
-    <div className="header">
-      <Title />
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
 const restaurantList =[
     {
       "info": {
@@ -1872,56 +1844,4 @@ const restaurantList =[
     }
   ]
 
-const RestaurantCard = ({
-  cloudinaryImageId,
-  name,
-  cuisines,
-  avgRating,
-}) => {
-  return (
-    <div className="res-card">
-      <img
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-      />
-      <h2>{name}</h2>
-      <h3>{cuisines.join(", ")}</h3>
-      <h4>{avgRating+"⭐️"}</h4>
-    </div>
-  );
-};
-
-
-const Body = () => {
-  return (
-    <div className="res-container">
-      {restaurantList.map((restaurant) => {
-        return <RestaurantCard key={restaurant.info.id} {...restaurant.info} />;
-      })}
-    </div>
-  );
-};
-
-
-const Footer = () => {
-    return(
-      <div className="footer">
-        <p className="copyright">Created by <a href="https://www.linkedin.com/in/shivam-kumar-6a3135260/">Shivam</a></p>
-      </div>
-    )
-  };
-
-const AppLayout = () => {
-  return (
-    <React.Fragment>
-      <Header />
-      <Body />
-      <Footer />
-    </React.Fragment>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+  export default restaurantList; 
