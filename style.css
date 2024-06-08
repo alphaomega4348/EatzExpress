@@ -196,3 +196,43 @@ body {
 .filter-btn:active {
     transform: scale(0.95);
 }
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.1);
+    font-size: 16px;
+    outline: none;
+}
+
+.search-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.search-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.search-button:active {
+    transform: scale(0.95);
+}
