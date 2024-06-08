@@ -1,12 +1,13 @@
 .shimmer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 20px;
 }
 
 .shimmer-cards {
+    flex-basis: calc(33.33% - 40px); /* 33.33% for 3 items and subtracting the total margin (20px on each side) */
     width: 300px;
     height: 300px;
     margin: 20px;
@@ -41,3 +42,7 @@
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
+
+
+
+
