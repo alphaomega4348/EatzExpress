@@ -1,5 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
  const Body = () => {
   const [List,setList]=useState([]);
   const fetchData= async() => {
@@ -13,6 +14,10 @@ import { useEffect, useState } from "react";
   useEffect(()=>{
     fetchData();
   },[])
+
+  if(List.length === 0){
+    return <Shimmer/>
+  }
   
     return (
       <div>
