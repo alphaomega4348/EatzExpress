@@ -3,15 +3,17 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
  const Body = () => {
   const [List,setList]=useState([]);
-  const dummy=List;
+  const [filteredList,setfilteredList]=useState([]);
   const [searchText,setSearchText]=useState([""]);
   const fetchData= async() => {
     const data= await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      // https://thingproxy.freeboard.io/fetch/
+      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
       const json=await data.json();
       console.log(json)   
-      setList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
+      setList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      setfilteredList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
   useEffect(()=>{
     fetchData();
@@ -31,11 +33,11 @@ import Shimmer from "./Shimmer";
             <button 
             onClick={()=>{
           const filteredRestaurants=    List.filter((res)=>(
-                  res.info.name.toLowerCase().includes(searchText.toLowerCase() ) 
+                  res?.info?.name.toLowerCase().includes(searchText.toLowerCase() ) 
           ))
-              setList(filteredRestaurants)
+          setfilteredList(filteredRestaurants)
               
-                
+                 
             }} 
             
             className="search-button"> Search</button>
@@ -49,7 +51,7 @@ import Shimmer from "./Shimmer";
         </div>
       
       <div className="res-container">
-        {List.map((restaurant) => {
+        {filteredList.map((restaurant) => {
           return <RestaurantCard key={restaurant.info.id} {...restaurant.info} />;
         })}
       </div>
