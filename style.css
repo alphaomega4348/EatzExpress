@@ -485,3 +485,35 @@ body {
 .add-btn:active {
     transform: scale(0.95);
 }
+
+.rating-green {
+    background-color: green;
+    width: 45px;
+    padding: 2px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.rating-orange {
+    background-color: orange;
+    width: 45px;
+    padding: 2px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.rating-yellow {
+    background-color: yellow;
+    width: 45px;
+    padding: 2px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.rating-red {
+    background-color: red;
+    width: 45px;
+    padding: 2px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
