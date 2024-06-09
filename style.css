@@ -278,6 +278,7 @@ body {
     background-color: #4CAF50;
     color: #fff;
     border: none;
+    margin-top: 130px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -285,6 +286,7 @@ body {
 
 .toggle-button:hover {
     background-color: #45a049;
+   
 }
 
 .contact-container {

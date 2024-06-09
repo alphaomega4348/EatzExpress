@@ -1,4 +1,5 @@
 import { useRouteError } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Error = () => {
     const err=useRouteError()
     return (
@@ -6,7 +7,7 @@ const Error = () => {
             <h1>404</h1>
             <h2>Oops! Page not found.</h2>
             <p className="error-message">{err.data}</p>
-            <a href="/">Go To Homepage</a>
+            <Link to="/">Go To Homepage</Link>
         </div>
     );
 }
