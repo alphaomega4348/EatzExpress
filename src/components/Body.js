@@ -2,10 +2,14 @@ import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
  const Body = () => {
   const [List,setList]=useState([]);
   const [filteredList,setfilteredList]=useState([]);
   const [searchText,setSearchText]=useState([""]);
+  useEffect(()=>{
+    fetchData();
+  },[])
   const fetchData= async() => {
     const data= await fetch(
       // https://thingproxy.freeboard.io/fetch/
@@ -15,9 +19,12 @@ import { Link } from "react-router-dom";
       setList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
       setfilteredList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
-  useEffect(()=>{
-    fetchData();
-  },[])
+    const onlineStatus=useOnlineStatus();
+
+    if(!onlineStatus){
+      return <h1>Looks Like you are offline!! Please Check your Internet connection</h1>
+    }
+
 
   if(!List||List.length === 0){
     return <Shimmer/>
