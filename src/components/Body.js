@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
     fetchData();
   },[])
 
-  if(List.length === 0){
+  if(!List||List.length === 0){
     return <Shimmer/>
   }
   
