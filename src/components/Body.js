@@ -35,24 +35,27 @@ import { Link } from "react-router-dom";
         setSearchText(e.target.value);
         const filteredRestaurants = List.filter((res) => (
             res?.info?.name.toLowerCase().includes(e.target.value.toLowerCase())
-        ));
+        )); 
         setfilteredList(filteredRestaurants);
+        console.log(filteredList)
     }}
 />
         </div>
           <button onClick={()=>{
-            filteredList=List.filter((res)=>res.info.avgRating
+           const filterList=List.filter((res)=>res.info.avgRating
             >4)
-            setList(filteredList)
+            setfilteredList(filterList)
           }}
            className="filter-btn">View Top Resturants</button>
         </div>
       
       <div className="res-container">
         {filteredList.map((restaurant) => {
-          return <Link key={restaurant.info.id} to ={"/restaurants/"+restaurant.info.id}><RestaurantCard  {...restaurant.info} />;</Link>
+          return filteredList.length===0?(<h1>Oops No Such Restaurants</h1> ) :( <Link key={restaurant.info.id} to ={"/restaurants/"+restaurant.info.id} className="restaurant-link">
+          <RestaurantCard  {...restaurant.info} />
+      </Link>)
         })}
-      </div>
+      </div> 
       </div>
     );
   };

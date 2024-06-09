@@ -84,6 +84,15 @@ body {
     box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
 }
 
+.restaurant-link {
+    color: inherit; /* This will make the link color the same as the surrounding text */
+    text-decoration: none; /* This will remove the underline */
+}
+
+.restaurant-link:visited {
+    color: inherit; /* This will make the link color the same as the surrounding text even after the link has been clicked */
+}
+
 .res-card img {
     width: 100%;
     height: 200px;
@@ -381,68 +390,98 @@ body {
     font-size: x-large;
 }
 
-
-
-.menu {
-    width: 80%;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-.menu h1, .menu h4 {
-    text-align: center;
-    color: #4CAF50;
-}
-
-.menu-items {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.menu-item {
-    border: 1px solid #ccc;
+.restaurant-menu-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu-items-container {
+    margin-top: 30px;
+    width: 850px;
+  }
+  .menu-title-wrap {
     padding: 20px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+  }
+  .menu-count {
+    margin-top: 14px;
+    line-height: 1.3;
+    color: rgba(40, 44, 63, 0.45);
+    letter-spacing: -0.3px;
+    font-size: 1rem;
+  }
+  
+  .menu-items-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease-in-out;
+    justify-content: center;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    max-height: 250px;
+    padding: 20px;
+    border-bottom: rgba(40, 44, 63, 0.45) 0.5px solid;
+  }
+  .menu-item-details {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    overflow: hidden;
+  }
+  
+  .item-title {
+    width: 60%;
+  }
+  .item-desc {
+    margin-top: 14px;
+    line-height: 1.3;
+    color: rgba(40, 44, 63, 0.45);
+    width: 60%;
+    letter-spacing: -0.3px;
+    font-size: 1rem;
+  }
+  .item-cost {
+    margin-top: 4px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #3e4152;
+    width: 40%;
+  }
+  
+  .menu-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 200px;
+    overflow: hidden;
+  }
+  .menu-item-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+  }
+  .add-btn {
+    background-color: rgb(211, 120, 23);
+    color: whitesmoke;
+    padding: 10px 30px;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid orange;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.menu-item:hover {
+.add-btn:hover {
+    background-color: orange;
     transform: scale(1.05);
 }
 
-.item-name {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.item-rating {
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-.item-price {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.add-to-cart {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.add-to-cart:hover {
-    background-color: #45a049;
+.add-btn:active {
+    transform: scale(0.95);
 }
