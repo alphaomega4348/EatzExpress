@@ -372,3 +372,9 @@ body {
 .error-container a:hover {
     background-color: #45a049;
 }
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    font-size: x-large;
+}
