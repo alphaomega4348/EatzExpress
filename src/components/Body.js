@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
  const Body = () => {
   const [List,setList]=useState([]);
   const [filteredList,setfilteredList]=useState([]);
@@ -10,8 +11,7 @@ import Shimmer from "./Shimmer";
       // https://thingproxy.freeboard.io/fetch/
       "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-      const json=await data.json();
-      console.log(json)   
+      const json=await data.json(); 
       setList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
       setfilteredList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
@@ -41,16 +41,16 @@ import Shimmer from "./Shimmer";
 />
         </div>
           <button onClick={()=>{
-            filterList=List.filter((res)=>res.info.avgRating
+            filteredList=List.filter((res)=>res.info.avgRating
             >4)
-            setList(filterList)
+            setList(filteredList)
           }}
            className="filter-btn">View Top Resturants</button>
         </div>
       
       <div className="res-container">
         {filteredList.map((restaurant) => {
-          return <RestaurantCard key={restaurant.info.id} {...restaurant.info} />;
+          return <Link key={restaurant.info.id} to ={"/restaurants/"+restaurant.info.id}><RestaurantCard  {...restaurant.info} />;</Link>
         })}
       </div>
       </div>
