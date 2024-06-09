@@ -286,3 +286,53 @@ body {
 .toggle-button:hover {
     background-color: #45a049;
 }
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: flex-end;
+}
+
+.contact-info, .contact-form, .contact-thanks {
+    width: 30%;
+}
+
+.contact-info h1, .contact-form h2 {
+    color: #4CAF50;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.contact-form button {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.contact-thanks img {
+    width: 100%;
+    height: auto;
+}
