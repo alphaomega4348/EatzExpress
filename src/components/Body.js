@@ -27,20 +27,18 @@ import Shimmer from "./Shimmer";
       <div className="body">
         <div className="filter">
         <div className="search-container">
-            <input type="text" className="search-input" value={searchText} onChange={(e)=>{
-              setSearchText(e.target.value)
-            }}/>
-            <button 
-            onClick={()=>{
-          const filteredRestaurants=    List.filter((res)=>(
-                  res?.info?.name.toLowerCase().includes(searchText.toLowerCase() ) 
-          ))
-          setfilteredList(filteredRestaurants)
-              
-                 
-            }} 
-            
-            className="search-button"> Search</button>
+        <input placeholder="Search for restaurants"
+    type="text" 
+    className="search-input" 
+    value={searchText} 
+    onChange={(e)=>{
+        setSearchText(e.target.value);
+        const filteredRestaurants = List.filter((res) => (
+            res?.info?.name.toLowerCase().includes(e.target.value.toLowerCase())
+        ));
+        setfilteredList(filteredRestaurants);
+    }}
+/>
         </div>
           <button onClick={()=>{
             filterList=List.filter((res)=>res.info.avgRating

@@ -7,5 +7,6 @@ import { LINKED_IN } from "../utils/constants";
       </div>
     )
   };
+  
 
   export default Footer;
