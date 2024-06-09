@@ -380,3 +380,69 @@ body {
     font-weight: bold;
     font-size: x-large;
 }
+
+
+
+.menu {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.menu h1, .menu h4 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.item-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.item-rating {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.item-price {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
