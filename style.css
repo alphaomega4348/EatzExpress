@@ -1,4 +1,4 @@
-* {
+/*  {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -85,12 +85,11 @@ body {
 }
 
 .restaurant-link {
-    color: inherit; /* This will make the link color the same as the surrounding text */
-    text-decoration: none; /* This will remove the underline */
-}
+    color: inherit; 
+    text-decoration: none; 
 
 .restaurant-link:visited {
-    color: inherit; /* This will make the link color the same as the surrounding text even after the link has been clicked */
+    color: inherit; 
 }
 
 .res-card img {
@@ -542,4 +541,4 @@ search-button:active {
     padding: 2px;
     color: white;
     font-family: 'Times New Roman', Times, serif;
-}
+} */
