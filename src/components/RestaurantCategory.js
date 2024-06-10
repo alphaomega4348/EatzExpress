@@ -5,10 +5,7 @@ import { useState } from "react";
 const RestaurantCategory = ({data}) => {
   const[showItems,setShowItems]=useState(false)
   const handleClick=()=>{
-    if(!showItems)
-    setShowItems(true)
-  else
-  setShowItems(false)
+    setShowItems(!showItems)
   }
   return (
     <div>
