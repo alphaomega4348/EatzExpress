@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
-import Shimmer from "./Shimmer";
+import {Shimmer} from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
  const Body = () => {
@@ -26,7 +26,8 @@ import useOnlineStatus from "../utils/useOnlineStatus";
     }
 
 
-  if(!List||List.length === 0){
+  if(List.length === 0){
+    console.log("hi1");
     return <Shimmer/>
   }
   
