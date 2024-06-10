@@ -1,6 +1,6 @@
 const CDN_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
 
-const LOGO_URL="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&txt_keyword=All"
+const LOGO_URL="https://png.pngtree.com/element_our/png/20180928/food-icon-design-vector-png_114586.jpg"
 
 const LINKED_IN="https://www.linkedin.com/in/shivam-kumar-6a3135260/"
 

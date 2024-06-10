@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Title from "./Title.js";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
 const Header = () => {
-  const onlineStatus = useOnlineStatus() ? "✅" : "🔴";
+  const onlineStatus = useOnlineStatus() ? "🟢" : "🔴";
     return (
       <div className="header">
         <Title/>
