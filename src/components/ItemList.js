@@ -11,8 +11,8 @@ const ItemList = ({items}) => {
             <span className="block text-lg font-semibold text-gray-700 mb-4">₹ {item.card.info.price/100 || item.card.info.defaultPrice/100}</span>
             <span className="block text-sm text-gray-500 mb-4">{item.card.info.description}</span>
           </div>
-          <div className="mx-2 text-right">
-            <img className="w-64 h-32 object-contain mb-2" src={MENU_CLOUDINARY + item.card.info.imageId} alt="" />
+          <div className="mr-2 flex flex-col items-end">
+            <img className=" w-32 object-contain mb-2" src={MENU_CLOUDINARY + item.card.info.imageId} alt="" />
             <div className="relative">
               <button className="w-28 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add</button>
               <FaPlus className="absolute top-0 right-0 mt-[0.5px] mr-[1px] text-sm"/>
