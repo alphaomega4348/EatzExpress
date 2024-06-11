@@ -12,6 +12,9 @@ import UserContext from "./utils/UserContext";
 
 
 const Grocery=lazy(()=> import ("./components/Grocery"))
+const About=lazy(()=> import ("./components/About"))
+const Contact=lazy(()=> import ("./components/Contact"))
+
 
 const AppLayout = () => {
   const [userName,setUserName]=useState();
