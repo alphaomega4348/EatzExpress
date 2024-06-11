@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import {Shimmer} from "./Shimmer";
-import { Link } from "react-router-dom";
+import Snake from "./Snake";
 import useOnlineStatus from "../utils/useOnlineStatus";
  const Body = () => {
   const [List,setList]=useState([]);
@@ -22,7 +23,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
     const onlineStatus=useOnlineStatus();
 
     if(!onlineStatus){
-      return <h1>Looks Like you are offline!! Please Check your Internet connection</h1>
+      return <Snake/>
     }
 
 
