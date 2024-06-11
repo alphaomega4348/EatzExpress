@@ -3,8 +3,9 @@ import {MenuShimmer} from "./Shimmer";
 import RestaurantCategory from "./RestaurantCategory";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { ITEM_TYPES } from "../utils/constants";
+import { useState } from "react";
 const RestaurantMenu = () => {
-
+    const [showIndex,setShowIndex]=useState(null)
     const { resId } = useParams();
     const resInfo=useRestaurantMenu(resId);   
    
@@ -30,8 +31,12 @@ const RestaurantMenu = () => {
                 </div>
                 <div className="">
                 {
-                    categories.map((c)=>{
-                        return <RestaurantCategory key={c.card.card.title} data={c?.card?.card}/>
+                    categories.map((c,index)=>{
+                        return <RestaurantCategory
+                         key={c.card.card.title} 
+                         data={c?.card?.card}
+                         showItems={index===showIndex && true}
+                         setShowIndex={()=>setShowIndex(index)}/>
                     })
                 }
                 </div>
