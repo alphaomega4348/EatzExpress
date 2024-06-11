@@ -9,15 +9,15 @@ const RestaurantCard = ({
     
     return (
       <div className="res-card">
-        <img
+        <img 
           src={
             CDN_URL +
             cloudinaryImageId
           }
         />
-        <h2>{name}</h2>
-        <h3>{cuisines.join(", ")}</h3>
-        <h4>{avgRating+"⭐️"}</h4>
+        <div className="font-bold  my-3">{name}</div>
+        <div className="text-gray-700 font-light" >{cuisines.join(", ")}</div>
+        <div className=" mt-1 font-mono font-bold">{avgRating+"⭐️"}</div>
       </div>
     );
   };
