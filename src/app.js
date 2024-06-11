@@ -19,14 +19,14 @@ const AppLayout = () => {
   //Authentication
   useEffect(()=>{
     //API call for login
-    const data={
+    let data={
       name:"Shivam Kumar"
     }
     setUserName(data.name)
-  })
+  },[])
 
   return (
-    <UserContext.Provider value={{loggedInUser:userName}}>
+    <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
       <Header/>
       <Outlet/>
       <Footer/>
