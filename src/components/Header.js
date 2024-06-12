@@ -10,7 +10,8 @@ const Header = () => {
 
   const { loggedInUser } = useContext(UserContext);
 
-  const cart=useSelector()  //Subscribing to store using a selector
+  //Subscribing to store using a selector
+  const cartItems=useSelector((store)=>store.cart.items)  
 
   return (
     <div className="header">
@@ -39,7 +40,7 @@ const Header = () => {
             <Link to="/cart">
              <FaCartShopping/>
             </Link>
-            <div className="nav-cart-count">0</div>
+            <div className="nav-cart-count">{cartItems.length}</div>
           </div>
         </ul>
       </div>

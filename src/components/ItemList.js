@@ -1,7 +1,15 @@
-import { MENU_CLOUDINARY } from "../utils/constants";
+import { useDispatch } from "react-redux";
 import { FaPlus } from "react-icons/fa";
+import { MENU_CLOUDINARY } from "../utils/constants";
+import { addItem } from "../utils/cartSlice";
 
 const ItemList = ({items}) => {
+
+    const dispatch=useDispatch()
+
+    const handleAddItem=()=>{
+      dispatch(addItem("pizza"))
+    }
   return (
     <div>
       {items.map((item, index) => (
@@ -14,7 +22,7 @@ const ItemList = ({items}) => {
           <div className="mr-2 flex flex-col items-end">
             <img className=" w-32 object-contain mb-2" src={MENU_CLOUDINARY + item.card.info.imageId} alt="" />
             <div className="relative">
-              <button className="w-28 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add</button>
+              <button className="w-28 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleAddItem}>Add</button>
               <FaPlus className="absolute top-0 right-0 mt-[0.5px] mr-[1px] text-sm"/>
             </div>
           </div>
