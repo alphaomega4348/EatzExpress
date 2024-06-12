@@ -1,12 +1,16 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { FaCartShopping } from "react-icons/fa6"; 
 import Title from "./Title.js";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
 import UserContext from "../utils/UserContext.js";
-import { FaCartShopping } from "react-icons/fa6";
 const Header = () => {
   const onlineStatus = useOnlineStatus() ? "🟢" : "🔴";
+
   const { loggedInUser } = useContext(UserContext);
+
+  const cart=useSelector()  //Subscribing to store using a selector
 
   return (
     <div className="header">
@@ -16,6 +20,7 @@ const Header = () => {
         <span className="font-bold text-green-600  text-xl">
           {loggedInUser}
         </span>
+        
       </div>
       <div className=" nav-items">
         <ul className="mt-6">
