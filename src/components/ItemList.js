@@ -46,7 +46,8 @@ const ItemList = ({ items }) => {
               >
                 <FaMinus />
               </button>
-              <span className="text-lg font-semibold">{item.quantity}</span>
+              <span className="text-lg font-semibold">{item.quantity?item.quantity:1}</span>
+              {console.log(item.quantity)}
               <button
                 className="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded"
                 onClick={() => handleAddItem(item)}
