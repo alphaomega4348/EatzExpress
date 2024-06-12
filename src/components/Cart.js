@@ -14,7 +14,7 @@ const Cart = () => {
         <>
           <ItemList items={cartItems} />
           <button
-            className="bg-red-500 rounded-xl hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4"
+            className="bg-red-500 rounded-xl hover:bg-red-700 text-white font-bold py-2 px-4  mt-4"
             onClick={() => dispatch(clearCart())}
           >
             Clear Cart
