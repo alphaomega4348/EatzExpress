@@ -12,7 +12,7 @@ logs/
 node_modules/
 parcel-bundle-reports/
 tmp
-
+.env
 /target/
 
 .DS_Store
